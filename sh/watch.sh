@@ -10,10 +10,10 @@ elif [ $# -lt 2 ]
   then
     echo "Please mention time in seconds as the second parameter like \"watch.sh $1 2\""
 else
-    clear
-    echo "Every $2 seconds"
     while true
-      do   
+      do
+         clear
+         echo "Every $2 seconds: "
 	 $1
          # #? is used for mentioning the result of the previous command and if command is not successful terminate the program.
          if [ $? -ne 0 ]
